@@ -14,7 +14,9 @@ const apiKey = 'd7e306622a244886bc990cf23ef9ef69';
 // const Request = require('request');
 
 // for css styling
-app.use(express.static('assets'));
+// next = go onto the "next" set of middleware
+app.use('/assets', express.static('assets'));
+
 
 
 app.use(bodyParser.json())
@@ -47,7 +49,7 @@ app.set("view engine", "ejs");
 
 
 // SHOW ALL
-app.get('/articles', (request, response) => {
+app.get('/home', (request, response) => {
   Article.showAllArticles().then(everyArticle => {
     response.render('index', { articles: everyArticle })
     // response.render('index', { news: allArts });
@@ -55,12 +57,12 @@ app.get('/articles', (request, response) => {
 });
 
 // CREATE get
-app.get('/articles/create', (request, response) => {
+app.get('/home/create', (request, response) => {
   response.render('create');
 })
 
 // EDIT get
-app.get('/articles/:id/edit', (request, response) => {
+app.get('/home/:id/edit', (request, response) => {
   let editArticle = parseInt(request.params.id);
   Article.findById(editArticle).then(article => {
     response.render('edit', { article: article});
@@ -69,11 +71,11 @@ app.get('/articles/:id/edit', (request, response) => {
 
 
 // EDIT put
-app.put('/articles/:id', urlencodedParser, (request, response) => {
+app.put('/home/:id', urlencodedParser, (request, response) => {
   let id = parseInt(request.params.id);
   let editedArticle = request.body;
   Article.editArticle(id, editedArticle);
-    response.redirect(`/articles/${id}`);
+    response.redirect(`/home/${id}`);
 });
   // .catch((error) => {
   //   response.send(error);
@@ -81,7 +83,7 @@ app.put('/articles/:id', urlencodedParser, (request, response) => {
 
 
 // SHOW ONE
-app.get('/articles/:id', (request, response) => {
+app.get('/home/:id', (request, response) => {
   const id = parseInt(request.params.id);
   Article.findById(id).then(articleId => {
     response.render('onearticle', { article: articleId });
@@ -89,11 +91,11 @@ app.get('/articles/:id', (request, response) => {
 });
 
 // CREATE
-app.post('/articles/new', urlencodedParser, (request, response) => {
+app.post('/home/new', urlencodedParser, (request, response) => {
   const articleNew = request.body;
   Article.createArticle(articleNew).then(article => {
     // response.redirect(`/${task.id}`);
-    response.redirect('/articles');
+    response.redirect('/home');
   })
   .catch((error) => {
     response.send(error);
@@ -101,10 +103,10 @@ app.post('/articles/new', urlencodedParser, (request, response) => {
 });
 
 // DELETE
-app.delete('/articles/:id', (request, response) => {
+app.delete('/home/:id', (request, response) => {
   const id = parseInt(request.params.id);
 Article.deleteArticle(id);
-response.redirect('/articles');
+response.redirect('/home');
 })
 
 

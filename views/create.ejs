@@ -1,5 +1,7 @@
 
 
+<% include partials/header.ejs %>
+
 <form class="form-horizontal" action="/articles/new" method="post">
   <fieldset>
 
@@ -32,14 +34,8 @@
     </div>
   </div>
 
-  <!-- Go Back Button -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="go-back"></label>
-    <div class="col-md-4">
-      <button id="go-back" name="go-back" class="btn btn-success">
-  <a href="/articles">Return to list</a></br></br></button>
-    </div>
-  </div>
 
   </fieldset>
 </form>
+
+<% include partials/footer.ejs %>
