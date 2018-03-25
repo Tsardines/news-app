@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>All Articles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+
+</head>
+
+<body>
+  <h1>Articles:</h1>
+  <% articles.forEach((everyArticle) => {%>
+
+
+    <h3> <%= everyArticle.title %> </h3><p>
+      <%= everyArticle.url %>
+
+      <!-- Edit Button -->
+      <!-- <div class="form-group">
+        <label class="col-md-4 control-label" form="edit"></label>
+        <div class="col-md-4">
+          <button id="edit" name="edit" class="btn btn-success"> <a href="/todos/:id/edit">Edit Article</a></br></br></button>
+        </div>
+      </div> -->
+
+    </p>
+    <%})%>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+
+
+<form class="form-horizontal" action="/articles/new" method="post">
+  <fieldset>
+
+  <!-- Form Name -->
+  <legend>Add an Article</legend>
+
+  <!-- Text input - Title -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="subject">Article Title</label>
+    <div class="col-md-4">
+    <input id="title" name="title" type="text" placeholder="put title here" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input - url -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="content">Please enter url</label>
+    <div class="col-md-4">
+    <input id="url" name="url" type="text" placeholder="url placeholder" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="submit"></label>
+    <div class="col-md-4">
+      <button id="submit" name="submit" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+
+  <!-- Go Back Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="go-back"></label>
+    <div class="col-md-4">
+      <button id="go-back" name="go-back" class="btn btn-success">
+  <a href="/articles">Return to list</a></br></br></button>
+    </div>
+  </div>
+
+  </fieldset>
+</form>

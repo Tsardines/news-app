@@ -14,4 +14,24 @@ Article.showAllArticles = () => {
   return db.any('SELECT * FROM articles');
 };
 
+Article.findById = id => {
+  return db.one('SELECT * FROM articles WHERE id = $1', [id]);
+};
+
+Article.createArticle = article => {
+return db.one('INSERT INTO articles(title, url) VALUES($1, $2) RETURNING id', [article.title, article.url]);
+};
+
+Article.editArticle = (id, article) => {
+  db.none('UPDATE articles SET title = $1, url = $2 WHERE id = $3', [articles.title, articles.url, id]);
+};
+
+Article.deleteArticle = id => {
+  return db.one('DELETE FROM articles WHERE id = $1', [id]);
+};
+
+
+
+
+
 module.exports = Article;
