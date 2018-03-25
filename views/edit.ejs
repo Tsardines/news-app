@@ -1,0 +1,51 @@
+
+
+
+
+  <!-- Form Name -->
+  <h2>Edit article</h2>
+
+    <form action="<%= `/articles/${articles.id}?_method=PUT` %>" method="post" class="edit-form">
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="title">Article Title</label>
+    <div class="col-md-4">
+    <input id="title" name="title" type="text" value="<%= articles.title%>" placeholder="title" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="url">What'll ye do differently?</label>
+    <div class="col-md-4">
+    <input id="url" name="url" type="text" value="<%= articles.url%>" placeholder="url" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Button -->
+
+
+    <button class="article-save-button">Save</button>
+  </form>
+
+  <!-- Go Back Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="go-back"></label>
+    <div class="col-md-4">
+      <button id="go-back" name="go-back" class="btn btn-success">
+  <a href="/articles">Return to list</a></br></br></button>
+    </div>
+  </div>
+
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button class="todo-save-button">Save</button>
+  </div>
+</div> -->
+
+  </fieldset>
+</form>
