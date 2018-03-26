@@ -2,7 +2,7 @@
 
 <% include partials/navbar.ejs %>
 
-<body>
+
 
 <form class="form-horizontal" action="/home/create" method="post">
   <fieldset>
@@ -10,12 +10,38 @@
   <!-- Form Name -->
   <legend>Add an Article</legend>
 
+  <!-- Name/Source -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="name">Article Source</label>
+    <div class="col-md-4">
+    <input id="name" name="title" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Author -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="author">Author</label>
+    <div class="col-md-4">
+    <input id="author" name="author" type="text" class="form-control input-md">
+
+    </div>
+  </div>
 
   <!-- Title -->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="subject">Article Title</label>
+    <label class="col-md-4 control-label" for="title">Article Title</label>
     <div class="col-md-4">
-    <input id="title" name="title" type="text" placeholder="put title here" class="form-control input-md">
+    <input id="title" name="title" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="description">Give a brief description</label>
+    <div class="col-md-4">
+    <input id="description" name="description" type="text" class="form-control input-md">
 
     </div>
   </div>
@@ -24,7 +50,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="content">Please enter url</label>
     <div class="col-md-4">
-    <input id="url" name="url" type="text" placeholder="url placeholder" class="form-control input-md">
+    <input id="url" name="url" type="text" class="form-control input-md">
 
     </div>
   </div>
@@ -42,7 +68,4 @@
 </form>
 
 
-
 <% include partials/footer.ejs %>
-
-</body>

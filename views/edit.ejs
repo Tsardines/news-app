@@ -6,48 +6,61 @@
 
     <form action="<%= `/home/${article.id}?_method=PUT` %>" method="post" class="edit-form">
 
-  <!-- Edit title -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="title">Article Title</label>
-    <div class="col-md-4">
-    <input id="title" name="title" type="text" value="<%= article.title%>" placeholder="title" class="form-control input-md">
+      <!-- Edit Name/Source -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="name">Update Source</label>
+        <div class="col-md-4">
+        <input id="name" name="title" type="text" class="form-control input-md">
 
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Edit name/source -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="title">Article Source</label>
-    <div class="col-md-4">
-    <input id="title" name="title" type="text" value="<%= article.name%>" placeholder="title" class="form-control input-md">
+      <!-- Edit Author -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="author">Update Author</label>
+        <div class="col-md-4">
+        <input id="author" name="author" type="text" class="form-control input-md">
 
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Edit url -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="url">URL</label>
-    <div class="col-md-4">
-    <input id="url" name="url" type="text" value="<%= article.url%>" placeholder="url" class="form-control input-md">
+      <!-- Edit Title -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="title">Update Title</label>
+        <div class="col-md-4">
+        <input id="title" name="title" type="text" class="form-control input-md">
 
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- Button -->
+      <!-- Edit Description -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="description">Update description</label>
+        <div class="col-md-4">
+        <input id="description" name="description" type="text" class="form-control input-md">
+
+        </div>
+      </div>
+
+      <!-- Edit url -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="content">Update url</label>
+        <div class="col-md-4">
+        <input id="url" name="url" type="text" class="form-control input-md">
+
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-4">
+          <button id="submit" name="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
 
 
-    <button class="article-save-button">Save</button>
-  </form>
-
-
-<!-- <div class="form-group">
-  <label class="col-md-4 control-label" for="submit"></label>
-  <div class="col-md-4">
-    <button class="todo-save-button">Save</button>
-  </div>
-</div> -->
-
-  </fieldset>
-</form>
+      </fieldset>
+    </form>
 
 <% include partials/footer.ejs %>

@@ -1,28 +1,61 @@
 
-<body>
+
 
 <% include partials/navbar.ejs %>
 
-<div class="block">
-  <% articles.forEach((everyArticle) => {%>
+<body>
+
+      <style>
+
+        .user-block {
+          background-color: pink;
+          padding: 10px 0px 10px 0;
+        }
+
+      </style>
+
+<div class="user-block">
+  <% articles.forEach((allUserArts) => {%>
 
 
-    <h3><strong><%= everyArticle.title %></strong></h3>
-      <p>
-        <%= everyArticle.url %>
+    <h3><strong><%= allUserArts.title %></strong></h3>
 
-      <!-- Edit Button -->
-      <!-- <div class="form-group">
-      <label class="col-md-4 control-label" form="edit"></label>
-      <div class="col-md-4">
-        <button id="edit" name="edit" class="btn btn-success"> <a href="/articles/:id/edit">Edit Article</a></br></br></button>
-      </div>
-          </div> -->
+        <strong> <%= allUserArts.source.name %> </strong>
+          <br>
+            By: <%= allUserArts.author %>
+          <br>
+        <p> <%= allUserArts.description %> </p>
 
-      </p>
+            <%= allUserArts.url %>
+          <br>
+            <%= allUserArts.publishedAt %>
+
     <%})%>
 
 </div>
+
+
+<div class="api-block">
+  <% articles.forEach((everyAPIArticle) => {%>
+
+
+    <h3><strong><%= everyAPIArticle.title %></strong></h3>
+
+        <strong> <%= everyAPIArticle.source.name %> </strong>
+          <br>
+            <strong>By:</strong> <%= everyAPIArticle.author %>
+          <br>
+        <p> <%= everyAPIArticle.description %> </p>
+
+            <%= everyAPIArticle.url %>
+          <br>
+            <%= everyAPIArticle.publishedAt %>
+
+    <%})%>
+
+</div>
+
+</body>
 
   <% include partials/footer.ejs %>
 
@@ -32,4 +65,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 
-</body>
+
+<!-- Edit Button -->
+<!-- <div class="form-group">
+<label class="col-md-4 control-label" form="edit"></label>
+<div class="col-md-4">
+<button id="edit" name="edit" class="btn btn-success"> <a href="/home/:id/edit">Edit Article</a></br></br></button>
+</div>
+</div> -->
