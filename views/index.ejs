@@ -7,28 +7,34 @@
 
       <style>
 
+        h3, p {
+          padding: 5px 0 0 50px;
+        }
+
         .user-block {
           background-color: pink;
           padding: 10px 0px 10px 0;
         }
 
+
+
       </style>
 
 <div class="user-block">
-  <% articles.forEach((allUserArts) => {%>
+  <% userArticles.forEach((allUserArts) => {%>
 
 
     <h3><strong><%= allUserArts.title %></strong></h3>
 
-        <strong> <%= allUserArts.source.name %> </strong>
+      <p>  <strong> <%= allUserArts.name %> </strong>
           <br>
             By: <%= allUserArts.author %>
           <br>
-        <p> <%= allUserArts.description %> </p>
+              <%= allUserArts.description %>
 
-            <%= allUserArts.url %>
+            <i><%= allUserArts.url %></i>
           <br>
-            <%= allUserArts.publishedAt %>
+            <%= allUserArts.publishedAt %> </p>
 
     <%})%>
 
@@ -36,20 +42,20 @@
 
 
 <div class="api-block">
-  <% articles.forEach((everyAPIArticle) => {%>
+  <% apiArticles.forEach((everyAPIArticle) => {%>
 
 
     <h3><strong><%= everyAPIArticle.title %></strong></h3>
 
-        <strong> <%= everyAPIArticle.source.name %> </strong>
+        <p> <strong> <%= everyAPIArticle.source.name %> </strong>
           <br>
             <strong>By:</strong> <%= everyAPIArticle.author %>
           <br>
-        <p> <%= everyAPIArticle.description %> </p>
-
-            <%= everyAPIArticle.url %>
+         <%= everyAPIArticle.description %>
           <br>
-            <%= everyAPIArticle.publishedAt %>
+          <i>  <%= everyAPIArticle.url %> </i>
+          <br>
+            <%= everyAPIArticle.publishedAt %> </p>
 
     <%})%>
 

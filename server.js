@@ -33,18 +33,20 @@ app.get('/home', (request, response) => {
   // Article.showAllArticles().then(everyArticle => {
   //   response.render('index', { articles: everyArticle })
     // response.render('index', { news: allArts });
-    getNewsData(newsUrl).then(everyAPIArticle => {
-      let allArticles = everyAPIArticle.articles;
-      response.render('index', { articles: allArticles });
+    getNewsData(newsUrl).then(res => {
+      // let allArticles = everyAPIArticle.articles;
+      // res.locals.allArticles = res.articles;
+      // response.render('index', { articles: allArticles });
+      Article.showAllArticles().then(userArticles => {
+        // let allUserArts = userArticles.articles;
+        // console.log(userArticles);
+        response.render('index', { userArticles: userArticles, apiArticles: res.articles });
+      })
     })
+
 });
 
-app.get('/home', (request, response) => {
-    Article.showAllArticles().then(userArticles => {
-      let allUserArts = userArticles.articles;
-  response.render('index', { articles: allUserArts });
-  })
-});
+// app.get('/home', (request, response) => {
 
 
 
