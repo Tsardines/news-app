@@ -28,5 +28,4 @@ Article.deleteArticle = id => {
   return db.one('DELETE FROM articles WHERE id = $1', [id]);
 };
 
-
 module.exports = Article;

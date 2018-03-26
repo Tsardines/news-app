@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>News!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/style.css" type="text/css">
-
-</head>
-
-
 
 <body>
-  <% include partials/header.ejs %>
 
+<% include partials/navbar.ejs %>
 
-  <h1>Here's what's happening:</h1>
+<div class="block">
   <% articles.forEach((everyArticle) => {%>
 
 
-    <h3> <%= everyArticle.title %> </h3><p>
-      <%= everyArticle.url %>
+    <h3><strong><%= everyArticle.title %></strong></h3>
+      <p>
+        <%= everyArticle.url %>
 
       <!-- Edit Button -->
       <!-- <div class="form-group">
@@ -32,11 +19,17 @@
       </div>
           </div> -->
 
-    </p>
+      </p>
     <%})%>
+
+</div>
 
   <% include partials/footer.ejs %>
 
-</body>
+<!-- footer icons -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-</html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+</body>

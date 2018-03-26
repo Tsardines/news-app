@@ -13,8 +13,8 @@ const apiKey = 'd7e306622a244886bc990cf23ef9ef69';
 
 // const Request = require('request');
 
-// for css styling
-// next = go onto the "next" set of middleware
+// serves up static files
+// raw: localhost:4000/assets/style.css
 app.use('/assets', express.static('assets'));
 
 
@@ -91,7 +91,8 @@ app.get('/home/:id', (request, response) => {
 });
 
 // CREATE
-app.post('/home/new', urlencodedParser, (request, response) => {
+// stores data that's in the body of the request
+app.post('/home/create', urlencodedParser, (request, response) => {
   const articleNew = request.body;
   Article.createArticle(articleNew).then(article => {
     // response.redirect(`/${task.id}`);

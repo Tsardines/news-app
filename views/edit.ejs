@@ -1,26 +1,34 @@
 
-
-<% include partials/header.ejs %>
+<% include partials/navbar.ejs %>
 
   <!-- Form Name -->
   <h2>Edit article</h2>
 
-    <form action="<%= `/articles/${articles.id}?_method=PUT` %>" method="post" class="edit-form">
+    <form action="<%= `/home/${article.id}?_method=PUT` %>" method="post" class="edit-form">
 
-  <!-- Text input-->
+  <!-- Edit title -->
   <div class="form-group">
     <label class="col-md-4 control-label" for="title">Article Title</label>
     <div class="col-md-4">
-    <input id="title" name="title" type="text" value="<%= articles.title%>" placeholder="title" class="form-control input-md">
+    <input id="title" name="title" type="text" value="<%= article.title%>" placeholder="title" class="form-control input-md">
 
     </div>
   </div>
 
-  <!-- Text input-->
+  <!-- Edit name/source -->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="url">What'll ye do differently?</label>
+    <label class="col-md-4 control-label" for="title">Article Source</label>
     <div class="col-md-4">
-    <input id="url" name="url" type="text" value="<%= articles.url%>" placeholder="url" class="form-control input-md">
+    <input id="title" name="title" type="text" value="<%= article.name%>" placeholder="title" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Edit url -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="url">URL</label>
+    <div class="col-md-4">
+    <input id="url" name="url" type="text" value="<%= article.url%>" placeholder="url" class="form-control input-md">
 
     </div>
   </div>
