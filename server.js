@@ -34,21 +34,12 @@ app.get('/home', (request, response) => {
   //   response.render('index', { articles: everyArticle })
     // response.render('index', { news: allArts });
     getNewsData(newsUrl).then(res => {
-      // let allArticles = everyAPIArticle.articles;
-      // res.locals.allArticles = res.articles;
-      // response.render('index', { articles: allArticles });
       Article.showAllArticles().then(userArticles => {
-        // let allUserArts = userArticles.articles;
-        // console.log(userArticles);
         response.render('index', { userArticles: userArticles, apiArticles: res.articles });
       })
     })
 
 });
-
-// app.get('/home', (request, response) => {
-
-
 
 
 // CREATE get
