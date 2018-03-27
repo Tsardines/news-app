@@ -69,7 +69,7 @@ Finally, I named the site "Spark Lines." As in, a "headline that sparks your int
 - Edit and Delete buttons
 
 **3. Not important but urgent (how can something be not important but urgent?):**
-- The Create, Edit, and single article pages
+- The Create, Edit, and single article views
 
 **4. Not important and not urgent:**
 - Footer content
