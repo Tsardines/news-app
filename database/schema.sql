@@ -1,8 +1,4 @@
-CREATE DATABASE news_app;
 
-\c news_app
-
-DROP TABLE user_articles;
 
 CREATE TABLE user_articles (
   id BIGSERIAL PRIMARY KEY,
