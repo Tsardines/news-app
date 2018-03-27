@@ -4,11 +4,9 @@ Disclaimer:
 
 To view/edit/delete a single user-submitted article, go to:
 
-`.com/home/1/edit`
+`[herokuapp-link-here].com/home/1/edit`
 
-Direct links to each one will be fixed in the very near future.
-
-
+Direct links to each article will be added in the very near future.
 
 
 
