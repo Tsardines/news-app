@@ -3,6 +3,7 @@ const pgp = require('pg-promise')({});
 
 const Article = {};
 
+// connects to news_app database
 const connectionURL = "postgres://localhost:5432/news_app";
 
 // new database connection
@@ -15,11 +16,6 @@ Article.showAllArticles = () => {
 Article.findById = id => {
   return db.one('SELECT * FROM user_articles WHERE id = $1', [id]);
 };
-
-// Article.createArticle = article => {
-//   return db.one('INSERT INTO user_articles(name, title) VALUES($1, $2) RETURNING id', [article.name, article.title]);
-// };
-
 
 Article.createArticle = article => {
   return db.one('INSERT INTO user_articles(name, author, title, description, url) VALUES($1, $2, $3, $4, $5) RETURNING id', [article.name, article.author, article.title, article.description, article.url]);

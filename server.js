@@ -23,7 +23,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.set("view engine", "ejs");
 
 
-
 // SHOW API articles
 // Fetching the url (see top of page) for proper displaying
 let getNewsData = url => {
@@ -40,6 +39,7 @@ app.get('/home', (request, response) => {
 });
 
 // CREATE get
+// CREATE requires an initial GET
 app.get('/home/create', (request, response) => {
   response.render('create');
 })
@@ -57,8 +57,6 @@ app.get('/home/:id/edit', (request, response) => {
 
 
 // EDIT put
-// The second "EDIT" step
-// 2.
 app.put('/home/:id/edit', urlencodedParser, (request, response) => {
   let id = parseInt(request.params.id);
   let editedArticle = request.body;

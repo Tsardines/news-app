@@ -3,28 +3,25 @@
 <body>
 
       <style>
-
         h3, h4, p {
           padding-left: 50px;
         }
-
         .user-block {
           background-color: pink;
           padding: 10px 0px 10px 0;
           margin: 0 auto;
         }
-
         .form-edit, .form-delete {
           padding-left: 50px;
           padding-top: 10px;
         }
-
       </style>
 
   <h3><strong><%= article.title %></strong></h3>
 
       <h4> <strong> <%= article.source %> </strong> </h4>
-    <p> <br>
+    <p>
+        <br>
           <strong>By:</strong> <%= article.author %>
         <br>
        "<%= article.description %>"
@@ -47,7 +44,6 @@
       <button type="submit">Remove this article?</button>
     </form>
   </div>
-
 
 
 </body>
