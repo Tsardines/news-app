@@ -1,13 +1,32 @@
 // require database setup to use pg-Promise
 const pgp = require('pg-promise')({});
 
-const Article = {};
-
 // connects to news_app database
 const connectionURL = "postgres://localhost:5432/news_app";
 
 // new database connection
-const db = pgp(connectionURL);
+// Line 9 will work with localhost, but not with Heroku deployment
+// const db = pgp(connectionURL);
+
+let db;
+
+if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
+  db = pgp({
+    // Fill in with your local database name
+    database: 'news_app',
+    port: 5432,
+    host: 'localhost',
+  });
+} else if (process.env.NODE_ENV === 'production') {
+    // Heroku will set this variable for you.
+    db = pgp(process.env.DATABASE_URL);
+}
+
+module.exports = db;
+
+
+const Article = {};
+
 
 Article.showAllArticles = () => {
   return db.any('SELECT * FROM user_articles');

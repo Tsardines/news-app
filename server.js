@@ -9,6 +9,8 @@ const fetch = require('node-fetch')
 
 const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=d7e306622a244886bc990cf23ef9ef69';
 
+app.set('port', (process.env.PORT || 4000));
+
 // serves up static files
 // raw: localhost:4000/assets/style.css
 app.use('/assets', express.static('assets'));
@@ -97,5 +99,5 @@ Article.deleteArticle(id);
 })
 
 app.listen(PORT, () => {
-  console.log(`'$${PORT}!`)
+  console.log(`$${PORT}!`)
 });
