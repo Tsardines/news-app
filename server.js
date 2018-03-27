@@ -25,38 +25,29 @@ app.set("view engine", "ejs");
 
 
 // SHOW API articles
+// Fetching the url (see top of page) for proper displaying
 let getNewsData = url => {
   return fetch(url).then(response => response.json());
 };
 
+// Chains .thens---after the first statement runs, the second continues right after it, rather than stopping after the first one. This would cause the user submissions to not render.
 app.get('/home', (request, response) => {
-  // Article.showAllArticles().then(everyArticle => {
-  //   response.render('index', { articles: everyArticle })
-    // response.render('index', { news: allArts });
     getNewsData(newsUrl).then(res => {
       Article.showAllArticles().then(userArticles => {
         response.render('index', { userArticles: userArticles, apiArticles: res.articles });
       })
     })
-
 });
-
 
 // CREATE get
 app.get('/home/create', (request, response) => {
   response.render('create');
 })
 
-// // EDIT get userArticles
-// app.get('/home/:id/edit', (request, response) => {
-//   let editArticle = parseInt(request.params.id);
-//   Article.findById(editArticle).then(article => {
-//     response.render('edit', { article: article});
-//   })
-// })
-
 
 // EDIT get
+// The first step toward editing
+// 1. Get a single user submitted article by id
 app.get('/home/:id/edit', (request, response) => {
   let editArticle = parseInt(request.params.id);
   Article.findById(editArticle).then(article => {
@@ -66,7 +57,9 @@ app.get('/home/:id/edit', (request, response) => {
 
 
 // EDIT put
-app.put('/home/:id', urlencodedParser, (request, response) => {
+// The second "EDIT" step
+// 2.
+app.put('/home/:id/edit', urlencodedParser, (request, response) => {
   let id = parseInt(request.params.id);
   let editedArticle = request.body;
   Article.editArticle(id, editedArticle);
@@ -90,19 +83,18 @@ app.get('/home/:id', (request, response) => {
 app.post('/home/create', urlencodedParser, (request, response) => {
   const articleNew = request.body;
   Article.createArticle(articleNew).then(article => {
-    // response.redirect(`/${task.id}`);
     response.redirect('/home');
   })
-  // .catch((error) => {
-  //   response.send(error);
-  // })
+  .catch((error) => {
+    response.send(error);
+  })
 });
 
 // DELETE
 app.delete('/home/:id', (request, response) => {
   const id = parseInt(request.params.id);
 Article.deleteArticle(id);
-response.redirect('/home');
+  response.redirect('/home');
 })
 
 app.listen(PORT, () => {
