@@ -4,13 +4,13 @@
   <!-- Form Name -->
   <h2>Edit article</h2>
 
-    <form action="<%= `/home/${article.id}?_method=PUT` %>" method="post" class="edit-form">
+    <form action="<%= `/home/${article.id}/edit?_method=PUT` %>" method="post" class="edit-form">
 
       <!-- Edit Name/Source -->
       <div class="form-group">
         <label class="col-md-4 control-label" for="name">Update Source</label>
         <div class="col-md-4">
-        <input id="name" name="title" type="text" class="form-control input-md">
+        <input id="name" name="name" value="<%=article.name%>" type="text" class="form-control input-md">
 
         </div>
       </div>
@@ -19,7 +19,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="author">Update Author</label>
         <div class="col-md-4">
-        <input id="author" name="author" type="text" class="form-control input-md">
+        <input id="author" name="author" value="<%=article.author%>" type="text" class="form-control input-md">
 
         </div>
       </div>
@@ -28,7 +28,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="title">Update Title</label>
         <div class="col-md-4">
-        <input id="title" name="title" type="text" class="form-control input-md">
+        <input id="title" name="title" value="<%=article.title%>" type="text" class="form-control input-md">
 
         </div>
       </div>
@@ -37,7 +37,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="description">Update description</label>
         <div class="col-md-4">
-        <input id="description" name="description" type="text" class="form-control input-md">
+        <input id="description"  value="<%=article.description%>" name="description" type="text" class="form-control input-md">
 
         </div>
       </div>
@@ -46,7 +46,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="content">Update url</label>
         <div class="col-md-4">
-        <input id="url" name="url" type="text" class="form-control input-md">
+        <input id="url" name="url" value="<%=article.url%>" type="text" class="form-control input-md">
 
         </div>
       </div>

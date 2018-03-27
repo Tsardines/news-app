@@ -51,7 +51,8 @@ app.get('/home/create', (request, response) => {
 app.get('/home/:id/edit', (request, response) => {
   let editArticle = parseInt(request.params.id);
   Article.findById(editArticle).then(article => {
-    response.render('edit', { article: article});
+    console.log(article);
+    response.render('edit', { article });
   })
 })
 
@@ -59,13 +60,13 @@ app.get('/home/:id/edit', (request, response) => {
 // EDIT put
 app.put('/home/:id/edit', urlencodedParser, (request, response) => {
   let id = parseInt(request.params.id);
-  let editedArticle = request.body;
-  Article.editArticle(id, editedArticle);
-    response.redirect(`/home/${id}`);
+  let articleData = request.body;
+    console.log('articleData', articleData);
+  Article.editArticle(id, articleData).then(articleData => {
+    // console.log(article);
+    response.redirect(`/home/${id}`, { articleData })
+  })
 });
-  // .catch((error) => {
-  //   response.send(error);
-  // })
 
 
 // SHOW ONE
