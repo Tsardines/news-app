@@ -2,7 +2,7 @@ CREATE DATABASE news_app;
 
 \c news_app
 
-DROP TABLE articles;
+DROP TABLE user_articles;
 
 CREATE TABLE user_articles (
   id BIGSERIAL PRIMARY KEY,
@@ -10,17 +10,5 @@ CREATE TABLE user_articles (
   author VARCHAR(255),
   title VARCHAR(255),
   description VARCHAR(255),
-  url VARCHAR(255),
-  publishedAt timestamp with time zone
+  url VARCHAR(255)
 );
-
--- CREATE TABLE api_articles (
-   --id BIGSERIAL PRIMARY KEY,
-  --name VARCHAR(255),
-  --author VARCHAR(255),
-  --title VARCHAR(255),
-  --description VARCHAR(255),
-  --url VARCHAR(255),
-  --urlToImage VARCHAR(255),
-  --publishedAt timestamp with time zone
--- ); 

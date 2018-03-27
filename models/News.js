@@ -17,11 +17,11 @@ Article.findById = id => {
 };
 
 Article.createArticle = article => {
-return db.one('INSERT INTO user_articles(source, author, title, description, url) VALUES($1, $2, $3, $4, $5, $6) RETURNING id', [article.title, article.url]);
+return db.one('INSERT INTO user_articles(source, author, title, description, url) VALUES($1, $2, $3, $4, $5, $6) RETURNING id', [article.source,  article.author,  article.title, article.description, article.url]);
 };
 
 Article.editArticle = (id, article) => {
-  db.none('UPDATE user_articles SET source = $1, author = $2, title = $3, description = $4, url = $5 WHERE id = $6', [article.title, article.url, id]);
+  db.none('UPDATE user_articles SET source = $1, author = $2, title = $3, description = $4, url = $5 WHERE id = $6', [article.source,  article.author,  article.title, article.description, article.url, id]);
 };
 
 Article.deleteArticle = id => {

@@ -1,16 +1,16 @@
 \c news_app
 
-INSERT INTO user_articles (title, url)
-VALUES ('Russia blows up Soviet-era landmark in World Cup city', 'https://www.aljazeera.com/news/2018/03/russia-blows-soviet-era-landmark-world-cup-city-180324171705494.html');
+INSERT INTO user_articles (name, author, title, description, url)
+VALUES ('The New York Times', 'Holly Golightly', 'Hubert de Givenchy honored at Tiffanys Gala', 'Things happened.', 'http://www.nytimes.com/article/givenchy');
 
-INSERT INTO user_articles (title, url)
-VALUES ('Uber is selling its south-east Asia operations to rival Grab', 'http://www.bbc.com/news/business-43536322');
+INSERT INTO user_articles (name, author, title, description, url)
+VALUES ('The Novigrad Herald', 'Alfred Pankratz', 'Famed witcher marries Vengerberg sorceress', 'More to follow', 'http://www.novigradherald.com');
 
-INSERT INTO user_articles (title, url)
-VALUES ('‘America First’ Bears a New Threat: Military Force', 'https://www.nytimes.com/2018/03/24/us/politics/trump-national-security-bolton.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=first-column-region&region=top-news&WT.nav=top-news');
+INSERT INTO user_articles (name, author, title, description, url)
+VALUES ('WashPo', 'Agent Duchess', 'Man enters a "zone of danger", comes out victorious', 'This man seems to be pretty cool.', 'http://www.washpo.org');
 
-INSERT INTO user_articles (title, url)
-VALUES ('State of Texas: Cooperation and concern after serial bomber manhunt', 'http://www.kxan.com/news/texas/state-of-texas-cooperation-and-concern-after-serial-bomber-manhunt/1074960550');
+INSERT INTO user_articles (name, author, title, description, url)
+VALUES ('Republic City Tribune', 'Lee Cuxin', 'Avatar finishes tour of Fire Nation', 'The Avatar has...', 'http://www.rctribune.org');
 
-INSERT INTO user_articles (title, url)
-VALUES ('Artifacts from 1893 World’s Fair found beneath Obama center site, but report signals construction won’t be blocked', 'http://www.chicagotribune.com/news/columnists/kamin/ct-met-obama-center-artifacts-kamin-0325-story.html');
+INSERT INTO user_articles (name, author, title, description, url)
+VALUES ('BBC', 'Bandysnatch Clubberbundt', 'Favourite corgi of Queen Elizabeth I named heir to the throne', 'The charming, four-legged low-rider has...', 'http://www.bbc.co.uk');

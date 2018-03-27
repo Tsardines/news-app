@@ -93,9 +93,9 @@ app.post('/home/create', urlencodedParser, (request, response) => {
     // response.redirect(`/${task.id}`);
     response.redirect('/home');
   })
-  .catch((error) => {
-    response.send(error);
-  })
+  // .catch((error) => {
+  //   response.send(error);
+  // })
 });
 
 // DELETE
