@@ -176,11 +176,14 @@ Login:
 
 
 ## Change Log
-A number of changes were made:
 
 1. The changing of projects
 
-2. Removed search bar from nav
+2. Using partials
+
+3. Implementing Bootstrap
+
+4. Removing search bar from nav
 
 ## Issues and Resolutions
 1. Had an issue where I could create articles and they'd show up in the database, but they wouldn't render to the index. Several attempts were made, including having getNewsData(newsUrl).then separate from the user-based Article.showAllArticles().then. The issue was resolved by chaining the former `.then` with the latter, as displayed below:
