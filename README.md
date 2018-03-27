@@ -1,24 +1,13 @@
 # news-app
 
-# job-board
-programmer job board
+Disclaimer:
 
-A thorough README.md file that contains the following:
+To view/edit/delete a single user-submitted article, go to:
 
-    The project's name and description
+`.com/home/1/edit`
 
-    Your wireframes and user stories
+Direct links to each one will be fixed in the very near future.
 
-    The technologies, APIs, and modules you used and a description of each
-
-    A code snippet of a part of the app you're particularly proud of
-
-    Any things you plan to fix or features you plan to add
-
-    Instructions for downloading the code and running it on localhost
-
-- get list from github pages url
-- add a job post
 
 
 
