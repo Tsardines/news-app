@@ -88,8 +88,7 @@ A user will be able to:
 - User will update account (PUT)
 
 ## Wireframes
-assets/news-app.png
-
+[Posted to imgur.](https://i.imgur.com/PeGSr6i.png)
 
 ## User Stories
 “As a person who just likes to browse headlines, I want to see all of my stories on a single page so that I don’t have to click on anything.”
