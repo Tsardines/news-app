@@ -1,4 +1,4 @@
-\c news_app
+
 
 INSERT INTO user_articles (name, author, title, description, url)
 VALUES ('The New York Times', 'Holly Golightly', 'Hubert de Givenchy honored at Tiffanys Gala', 'Things happened.', 'http://www.nytimes.com/article/givenchy');
