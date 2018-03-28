@@ -2,7 +2,7 @@
 const pgp = require('pg-promise')({});
 
 // connects to news_app database
-const connectionURL = "postgres://localhost:5432/news_app";
+// const connectionURL = "postgres://localhost:5432/news_app";
 
 // new database connection
 // Line 9 will work with localhost, but not with Heroku deployment
