@@ -1,4 +1,4 @@
-
+DROP TABLE user_articles;
 
 CREATE TABLE user_articles (
   id BIGSERIAL PRIMARY KEY,
