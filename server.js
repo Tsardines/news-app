@@ -70,7 +70,6 @@ app.put('/home/:id/edit', urlencodedParser, (request, response) => {
   })
 });
 
-
 // SHOW ONE
 app.get('/home/:id', (request, response) => {
   const id = parseInt(request.params.id);
