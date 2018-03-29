@@ -42,7 +42,7 @@ app.get('/', (request, response) => {
 
 // CREATE get
 // CREATE requires an initial GET
-app.get('/create', (request, response) => {
+app.get('/home/create', (request, response) => {
   response.render('create');
 })
 
