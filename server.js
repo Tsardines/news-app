@@ -32,7 +32,7 @@ let getNewsData = url => {
 };
 
 // Chains .thens---after the first statement runs, the second continues right after it, rather than stopping after the first one. This would cause the user submissions to not render.
-app.get('/home', (request, response) => {
+app.get('/', (request, response) => {
     getNewsData(newsUrl).then(res => {
       Article.showAllArticles().then(userArticles => {
         response.render('index', { userArticles: userArticles, apiArticles: res.articles });
@@ -42,7 +42,7 @@ app.get('/home', (request, response) => {
 
 // CREATE get
 // CREATE requires an initial GET
-app.get('/home/create', (request, response) => {
+app.get('/create', (request, response) => {
   response.render('create');
 })
 
@@ -66,7 +66,7 @@ app.put('/home/:id/edit', urlencodedParser, (request, response) => {
     console.log('articleData', articleData);
   Article.editArticle(id, articleData).then(articleData => {
     // console.log(article);
-    response.redirect(`/`, { articleData })
+    response.redirect(`/home/${id}`, { articleData })
   })
 });
 
