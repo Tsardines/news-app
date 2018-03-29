@@ -66,7 +66,7 @@ app.put('/home/:id/edit', urlencodedParser, (request, response) => {
     console.log('articleData', articleData);
   Article.editArticle(id, articleData).then(articleData => {
     // console.log(article);
-    response.redirect('/', { articleData })
+    response.redirect(`/home/${id}`, { articleData })
   })
 });
 
