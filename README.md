@@ -1,4 +1,4 @@
-# news-app
+https://spark-lines.herokuapp.com/
 
 Disclaimer:
 
@@ -9,7 +9,6 @@ To view/edit/delete a single user-submitted article, go to:
 Direct links to each article will be added in the very near future.
 
 
-
 # Table of Contents:
 
 ### 1. Project Description
@@ -17,15 +16,14 @@ Direct links to each article will be added in the very near future.
 #### - MVP
 #### - Post-MVP
 ### 3. Wireframes
-### 4. User Stories
-### 5. Database and Tables
-### 6. Technologies
+### 4. Database and Tables
+### 5. Technologies
 #### - APIs
-### 7. Pages
+### 6. Pages
 #### - Landing Page
 #### - Add Article
-### 8. Change Log
-### 9. Issues and Resolutions
+### 7. Change Log
+### 8. Issues and Resolutions
 
 
 
@@ -76,25 +74,6 @@ A user will be able to:
 
 ## Wireframes
 [Posted to imgur.](https://i.imgur.com/PeGSr6i.png)
-
-## User Stories
-“As a person who just likes to browse headlines, I want to see all of my stories on a single page so that I don’t have to click on anything.”
-
-"As a person who is hard of vision, I want to see the headlines in a large font so that I won't have to strain my eyes."
-
-"As a person who likes to collect amusing headlines, I want to be able to submit my own articles so that I can look at them later."
-
-"As a person who likes the _idea_ of collecting headlines, I just want to be able to see the generated ones first so that my user submissions aren't the first thing I see."
-
-"As a person who appreciates formatting, I want the headline, source, author, and description to be spaced accordingly so that I can immediately identify them from a distance."
-
-"As a time junkie, I want to be able to see the exact date and time and article was submitted so that I can reference them down the line."
-
-“As an American, I want all of my articles to be based in the United States so that I can focus on what's relevant to me and ignore the rest of the world.”
-
-"As a picky article submitter, I want to be able to edit a submission so that I have peace of mind."
-
-"As a changer of minds, I want to be able to delete some of my earlier submissions so that I don't have to seem them, ever again."
 
 
 ## The database and tables
