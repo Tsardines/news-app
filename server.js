@@ -24,7 +24,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 // view engine = ejs
 app.set("view engine", "ejs");
 
-
 // SHOW API articles
 // Fetching the url (see top of page) for proper displaying
 let getNewsData = url => {
@@ -57,7 +56,6 @@ app.get('/home/:id/edit', (request, response) => {
     response.render('edit', { article });
   })
 })
-
 
 // EDIT put
 app.put('/home/:id/edit', urlencodedParser, (request, response) => {
