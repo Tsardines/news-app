@@ -41,10 +41,6 @@ Article.createArticle = article => {
   [article.name, article.author, article.title, article.description, article.url]);
 };
 
-// Article.editArtice = (id, article) => {
-//   db.one('UPDATE user_articles SET name = $1, author = $2 WHERE id = $3' [article.name, article.author, article.title]);
-// };
-
 Article.editArticle = (id, article) => {
   db.one('UPDATE user_articles SET name = $1, author = $2, title = $3, description = $4, url = $5 WHERE id = $6',
   [article.name, article.author, article.title, article.description, article.url, id]);

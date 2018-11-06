@@ -95,10 +95,6 @@ Article.deleteArticle(id);
   response.redirect('/home');
 })
 
-// app.listen(PORT, () => {
-//   console.log(`$${PORT}!`)
-// });
-
 app.listen(app.get("port"), function() {
  console.log("Node app is running on port", app.get("port"));
 });
